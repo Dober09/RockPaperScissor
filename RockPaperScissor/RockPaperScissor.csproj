@@ -57,9 +57,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\close.svg" />
+	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\paper.svg" />
+	  <None Remove="Resources\Images\rock.svg" />
+	  <None Remove="Resources\Images\rules.svg" />
+	  <None Remove="Resources\Images\scissors.svg" />
+	  <None Remove="Resources\Images\triangle.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

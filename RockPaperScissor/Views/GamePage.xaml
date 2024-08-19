@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissor.Views.GamePage"
+             BackgroundColor="#1f3756"
+             >
+<!-- Grid Game -->
+    <Grid  RowDefinitions="200,50">
+     <!--The Score Menu -->
+        <HorizontalStackLayout VerticalOptions="Center" Margin="10" Grid.Row="0" >
+            <Border Stroke="#606e85"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 10,10,10,10"
+                    Background="#1f3756"
+                    Padding="16,17"
+                    HorizontalOptions="Center">
+                <Image  Source="logo.svg"
+                        Aspect="AspectFit"
+                        WidthRequest="130"
+                        HeightRequest="130"
+                 />
+                
+
+            </Border>
+            
+        </HorizontalStackLayout>
+
+    <!--Game play ui-->
+        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,150,0,0">
+                
+                
+                <ImageButton Source="paper.svg"
+                         Aspect="AspectFit"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                />
+            
+            <Image Source="triangle.svg"
+                   Aspect="AspectFit"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   VerticalOptions="Start"
+                   />
+            
+            <ImageButton Source="scissors.svg"
+                         Aspect="AspectFit"
+                         WidthRequest="50"
+                        HeightRequest="50"
+             />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
