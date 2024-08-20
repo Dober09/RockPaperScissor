@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="RockPaperScissor.Views.RulesPopUp"
+               CanBeDismissedByTappingOutsideOfPopup="False"
+               >
+    <VerticalStackLayout BackgroundColor="Brown" Spacing="30" Padding="20">
+        <Button Text="Close"
+                Clicked="CloseBtn_Clicked"
+            />
+        <Label 
+            Text="Game Rules"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</toolkit:Popup>
