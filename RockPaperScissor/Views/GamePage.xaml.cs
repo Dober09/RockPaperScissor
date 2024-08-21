@@ -11,6 +11,8 @@ public partial class GamePage : ContentPage
 
 	private void RulePopup_Clicked(object sender ,EventArgs e)
 	{
+
+		
 		var popup = new RulesPopUp();
 		Console.WriteLine("open");
 		this.ShowPopup(popup);

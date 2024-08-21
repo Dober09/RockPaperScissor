@@ -28,8 +28,8 @@
                     <VerticalStackLayout HorizontalOptions="Center">
 
 
-                        <Label Text="Score" TextColor="#1f3756" FontSize="Title"  />
-                        <Label Text="0" TextColor="#1f3756" HorizontalOptions="Center" FontSize="30"/>
+                        <Label Text="Score" TextColor="#1f3756" FontSize="Title" FontAttributes="Bold"  />
+                        <Label Text="0" TextColor="#1f3756" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
                     </VerticalStackLayout>
                 </Grid>
 

@@ -5,13 +5,29 @@
              x:Class="RockPaperScissor.Views.RulesPopUp"
                CanBeDismissedByTappingOutsideOfPopup="False"
                >
-    <VerticalStackLayout BackgroundColor="Brown" Spacing="30" Padding="20">
-        <Button Text="Close"
-                Clicked="CloseBtn_Clicked"
-            />
-        <Label 
-            Text="Game Rules"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout BackgroundColor="snow"
+                         Spacing="30"
+                         Padding="20" >
+        <HorizontalStackLayout HorizontalOptions="Center"  >
+            <Label Text="Rules" 
+                   FontSize="30"
+                   TextColor="#1f3756"
+                   FontAttributes="Bold"
+                   Margin="70,0" />
+
+            <ImageButton Source="close.svg"
+                     Aspect="AspectFit"
+                     WidthRequest="24"
+                     HeightRequest="24"
+                     Clicked="CloseBtn_Clicked"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"
+                     />
+        </HorizontalStackLayout>
+        <Image Source="rules.svg"
+               Aspect="AspectFit"
+               WidthRequest="280"
+               HeightRequest="250"
+               />
     </VerticalStackLayout>
 </toolkit:Popup>
