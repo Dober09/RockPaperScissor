@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissor.ViewModels.GameScreen">
+    <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,50,0,0" Spacing="3">
+        <HorizontalStackLayout  HorizontalOptions="Center">
+
+            <!-- Paper -->
+            <ImageButton Source="paper.svg"
+                 Aspect="AspectFit"
+                 WidthRequest="75"
+                 HeightRequest="75"
+                 BackgroundColor="AntiqueWhite"
+                 CornerRadius="50"
+                 BorderColor="#ec9e0e"
+                 BorderWidth="5"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 Padding="15"         
+                />
+            <!-- Triangle for the game -->
+            <Image Source="triangle.svg"
+           Aspect="AspectFit"
+           
+           WidthRequest="200"
+           HeightRequest="200"
+           Margin="6,20,6,0"
+           VerticalOptions="Start"
+           />
+            <!-- Scissors -->
+            <ImageButton Source="scissors.svg"
+                 Aspect="AspectFit"
+                 WidthRequest="75"
+                 HeightRequest="75"
+                 BackgroundColor="AntiqueWhite"
+                 CornerRadius="50"
+                 BorderColor="#4865f4"
+                 BorderWidth="5"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 Padding="15" 
+                 />
+        </HorizontalStackLayout>
+
+        <!-- Rock -->
+        <ImageButton Source="rock.svg"
+                 Aspect="AspectFit"
+                 WidthRequest="75"
+                 HeightRequest="75"
+                 BorderColor="#dc2e4e"
+                 BorderWidth="5"
+                 BackgroundColor="AntiqueWhite"
+                 CornerRadius="50"
+                 HorizontalOptions="Center"
+                 Padding="15"
+                 />
+
+        <!-- Rule for the game -->
+       <!--
+        <Button Text="Rule"
+            Margin="0,30"
+            Clicked="RulePopup_Clicked"
+            BackgroundColor="Transparent"
+            WidthRequest="150"
+            TextColor="Snow"
+            BorderColor="snow"
+            BorderWidth="1"/>
+        -->
+
+    </VerticalStackLayout>
+</ContentView>

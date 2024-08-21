@@ -39,64 +39,59 @@
 
 
         <!--Game play ui-->
-        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,100,0,0">
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,100,0,0" Spacing="3">
+            <HorizontalStackLayout  HorizontalOptions="Center" Spacing="60">
 
-            <!-- Paper -->
-            <ImageButton Source="paper.svg"
-                         Aspect="AspectFit"
-                         WidthRequest="75"
-                         HeightRequest="75"
-                         BackgroundColor="AntiqueWhite"
-                         CornerRadius="50"
-                         BorderColor="#ec9e0e"
-                         BorderWidth="5"
-                         HorizontalOptions="Center"
-                         Padding="15"         
-                        />
-            <!-- Triangle for the game -->
-            <Image Source="triangle.svg"
-                   Aspect="AspectFit"
-                   WidthRequest="200"
-                   HeightRequest="200"
-                   Margin="3"
-                   VerticalOptions="Start"
-                   />
-            <!-- Scissors -->
-            <ImageButton Source="scissors.svg"
-                         Aspect="AspectFit"
-                         WidthRequest="75"
-                         HeightRequest="75"
-                         BackgroundColor="AntiqueWhite"
-                         CornerRadius="50"
-                         BorderColor="#4865f4"
-                         BorderWidth="5"
-                         HorizontalOptions="Center"
-                         Padding="15" 
-                         />
-        </HorizontalStackLayout>
+                <!-- Paper -->
+                <ImageButton Source="paper.svg"
+                             Aspect="AspectFit"
+                             WidthRequest="75"
+                             HeightRequest="75"
+                             BackgroundColor="AntiqueWhite"
+                             CornerRadius="50"
+                             BorderColor="#ec9e0e"
+                             BorderWidth="5"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Start"
+                             Padding="15"         
+                />
 
-        <VerticalStackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,260,0,0" Spacing="40">
-            <!-- Rock -->
-            <ImageButton Source="rock.svg"
-                         Aspect="AspectFit"
-                         WidthRequest="75"
-                         HeightRequest="75"
-                         BorderColor="#dc2e4e"
-                         BorderWidth="5"
-                         BackgroundColor="AntiqueWhite"
-                         CornerRadius="50"
-                         HorizontalOptions="Center"
-                         Padding="15"
-                         />
+                <ImageButton Source="scissors.svg"
+                             Aspect="AspectFit"
+                             WidthRequest="75"
+                             HeightRequest="75"
+                             BackgroundColor="AntiqueWhite"
+                             CornerRadius="50"
+                             BorderColor="#4865f4"
+                             BorderWidth="5"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Start"
+                             Padding="15" 
+                />
+            </HorizontalStackLayout>
 
-            <!-- Rule for the game -->
+            <Label Text="You lose" Margin="0,10" HorizontalOptions="Center" TextColor="Snow" FontSize="30" FontAttributes="Bold"/>
+
+            <Button Text="Play Again"
+                Margin="0,30"
+                Clicked="RulePopup_Clicked"
+                BackgroundColor="Transparent"
+                WidthRequest="150"
+                TextColor="Snow"
+                BorderColor="snow"
+                BorderWidth="1"
+                />
             <Button Text="Rule"
-                    Clicked="RulePopup_Clicked"
-                    BackgroundColor="Transparent"
-                    TextColor="Snow"
-                    BorderColor="snow"
-                    BorderWidth="1"/>
+                Margin="0,10"
+                Clicked="RulePopup_Clicked"
+                BackgroundColor="Transparent"
+                WidthRequest="150"
+                TextColor="Snow"
+                BorderColor="snow"
+                BorderWidth="1"
+                />
+            </VerticalStackLayout>
 
-        </VerticalStackLayout>
+
     </Grid>
 </ContentPage>
