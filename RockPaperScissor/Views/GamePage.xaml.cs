@@ -17,4 +17,10 @@ public partial class GamePage : ContentPage
 		Console.WriteLine("open");
 		this.ShowPopup(popup);
 	}
+
+    private void PlayAgain_Clicked(object sender, EventArgs e)
+    {
+		PlayGame.IsVisible = true;
+		Result.IsVisible = false;
+    }
 }

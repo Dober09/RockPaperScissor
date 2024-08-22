@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RockPaperScissor.Views.GamePage"
+             xmlns:viewmodel="clr-namespace:RockPaperScissor.ViewModels"
              BackgroundColor="#1f3756"
              >
     <!-- Grid Game -->
@@ -39,7 +40,8 @@
 
 
         <!--Game play ui-->
-        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,100,0,0" Spacing="3">
+        <viewmodel:GameScreen x:Name="PlayGame" Grid.Row="1" Margin="0,0,0,0" IsVisible="Hidden"/>
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,100,0,0" Spacing="3" x:Name="Result" IsVisible="Visible">
             <HorizontalStackLayout  HorizontalOptions="Center" Spacing="60">
 
                 <!-- Paper -->
@@ -74,24 +76,27 @@
 
             <Button Text="Play Again"
                 Margin="0,30"
-                Clicked="RulePopup_Clicked"
+                Clicked="PlayAgain_Clicked"
                 BackgroundColor="Transparent"
                 WidthRequest="150"
                 TextColor="Snow"
                 BorderColor="snow"
                 BorderWidth="1"
-                />
-            <Button Text="Rule"
-                Margin="0,10"
-                Clicked="RulePopup_Clicked"
-                BackgroundColor="Transparent"
-                WidthRequest="150"
-                TextColor="Snow"
-                BorderColor="snow"
-                BorderWidth="1"
+               
                 />
             </VerticalStackLayout>
+        <StackLayout Grid.Row="2" Margin="0,310" >
+            
+            <Button Text="Rule"
+                    Clicked="RulePopup_Clicked"
+                    BackgroundColor="Transparent"
+                    WidthRequest="150"
+                    TextColor="Snow"
+                    BorderColor="snow"
+                    BorderWidth="1"
+                />
 
+        </StackLayout>
 
     </Grid>
 </ContentPage>
