@@ -74,9 +74,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ViewModels\GameScreen.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\GamePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

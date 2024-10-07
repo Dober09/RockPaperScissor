@@ -1,4 +1,5 @@
 using CommunityToolkit.Maui.Views;
+using RockPaperScissor.ViewModels;
 
 namespace RockPaperScissor.Views;
 
@@ -7,20 +8,9 @@ public partial class GamePage : ContentPage
 	public GamePage()
 	{
 		InitializeComponent();
+		BindingContext = new IcommandViewModel();
+		listview.ItemsSource = new HandsToBePlayed().Handsplayed;
 	}
 
-	private void RulePopup_Clicked(object sender ,EventArgs e)
-	{
 
-		
-		var popup = new RulesPopUp();
-		Console.WriteLine("open");
-		this.ShowPopup(popup);
-	}
-
-    private void PlayAgain_Clicked(object sender, EventArgs e)
-    {
-		PlayGame.IsVisible = true;
-		Result.IsVisible = false;
-    }
 }

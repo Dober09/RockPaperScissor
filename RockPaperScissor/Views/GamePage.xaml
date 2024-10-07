@@ -6,23 +6,27 @@
              BackgroundColor="#1f3756"
              >
     <!-- Grid Game -->
-    <Grid  RowDefinitions="200,50,50">
+    
+    
+    
+    
+    <Grid  RowDefinitions="200,.7*,.3*">
         <!--The Score Menu -->
         <Border Stroke="#606e85"
-                StrokeThickness="4"
-                StrokeShape="RoundRectangle 10,10,10,10"
-                Background="#1f3756"
-                WidthRequest="300"
-                HeightRequest="140"
-                HorizontalOptions="Center">
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 10,10,10,10"
+            Background="#1f3756"
+            WidthRequest="300"
+            HeightRequest="140"
+            HorizontalOptions="Center">
             <HorizontalStackLayout VerticalOptions="Center" Grid.Row="0" Spacing="60" >
 
                 <Image  Source="logo.svg"
-                            Aspect="AspectFit"
-                            WidthRequest="130"
-                            HeightRequest="130"
-                            Margin="3"
-                            />
+                        Aspect="AspectFit"
+                        WidthRequest="130"
+                        HeightRequest="130"
+                        Margin="3"
+                        />
                 <Grid RowDefinitions=".3*,.3*" VerticalOptions="Center" HorizontalOptions="End" >
                     <RoundRectangle Fill="Snow" WidthRequest="70"  HeightRequest="80" CornerRadius="5" />
 
@@ -39,64 +43,45 @@
         </Border>
 
 
-        <!--Game play ui-->
-        <viewmodel:GameScreen x:Name="PlayGame" Grid.Row="1" Margin="0,0,0,0" IsVisible="Hidden"/>
-        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,100,0,0" Spacing="3" x:Name="Result" IsVisible="Visible">
-            <HorizontalStackLayout  HorizontalOptions="Center" Spacing="60">
+        <CollectionView x:Name="listview" ItemsSource="{Binding Handsplayed,Source={ viewmodel:HandsToBePlayed} }" Grid.Row="1" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
 
-                <!-- Paper -->
-                <ImageButton Source="paper.svg"
+
+                    <ImageButton Source="{Binding HandImage}"
                              Aspect="AspectFit"
                              WidthRequest="75"
                              HeightRequest="75"
-                             BackgroundColor="AntiqueWhite"
+                             BackgroundColor="White"
                              CornerRadius="50"
-                             BorderColor="#ec9e0e"
-                             BorderWidth="5"
-                             HorizontalOptions="Center"
-                             VerticalOptions="Start"
-                             Padding="15"         
-                />
-
-                <ImageButton Source="scissors.svg"
-                             Aspect="AspectFit"
-                             WidthRequest="75"
-                             HeightRequest="75"
-                             BackgroundColor="AntiqueWhite"
-                             CornerRadius="50"
-                             BorderColor="#4865f4"
+                             BorderColor="{Binding Color}"
                              BorderWidth="5"
                              HorizontalOptions="Center"
                              VerticalOptions="Start"
                              Padding="15" 
-                />
-            </HorizontalStackLayout>
+                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HandsToBePlayed}}, Path =PlayerSelectedHand }" 
+                             CommandParameter="{Binding .}"
+                 />
 
-            <Label Text="You lose" Margin="0,10" HorizontalOptions="Center" TextColor="Snow" FontSize="30" FontAttributes="Bold"/>
 
-            <Button Text="Play Again"
-                Margin="0,30"
-                Clicked="PlayAgain_Clicked"
-                BackgroundColor="Transparent"
-                WidthRequest="150"
-                TextColor="Snow"
-                BorderColor="snow"
-                BorderWidth="1"
-               
-                />
-            </VerticalStackLayout>
-        <StackLayout Grid.Row="2" Margin="0,310" >
-            
-            <Button Text="Rule"
-                    Clicked="RulePopup_Clicked"
-                    BackgroundColor="Transparent"
-                    WidthRequest="150"
-                    TextColor="Snow"
-                    BorderColor="snow"
-                    BorderWidth="1"
-                />
 
-        </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
+
+        <Button Text="Rule"
+             Margin="0,30"
+             HeightRequest="50"
+             BackgroundColor="#1f3756"
+             WidthRequest="150"
+             TextColor="Snow"
+             BorderColor="snow"
+             BorderWidth="1"
+             Grid.Row="2"
+             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:IcommandViewModel}}, Path =RulePopup_Clicked }" 
+             CommandParameter="{Binding .}"
+     />
     </Grid>
+
 </ContentPage>
