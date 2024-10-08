@@ -6,7 +6,7 @@
              BackgroundColor="#1f3756"
              >
     <!-- Grid Game -->
-    
+
     
     
     
@@ -79,7 +79,7 @@
              BorderColor="snow"
              BorderWidth="1"
              Grid.Row="2"
-             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:IcommandViewModel}}, Path =RulePopup_Clicked }" 
+             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HandsToBePlayed}}, Path =RulePopup_Clicked }" 
              CommandParameter="{Binding .}"
      />
     </Grid>

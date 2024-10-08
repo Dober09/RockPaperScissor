@@ -8,7 +8,7 @@ public partial class GamePage : ContentPage
 	public GamePage()
 	{
 		InitializeComponent();
-		BindingContext = new IcommandViewModel();
+		BindingContext = new HandsToBePlayed();
 		listview.ItemsSource = new HandsToBePlayed().Handsplayed;
 	}
 
