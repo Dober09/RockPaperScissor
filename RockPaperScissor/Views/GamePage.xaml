@@ -34,7 +34,7 @@
 
 
                         <Label Text="Score" TextColor="#1f3756" FontSize="Title" FontAttributes="Bold"  />
-                        <Label Text="0" TextColor="#1f3756" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
+                        <Label x:Name="score" Text="0" TextColor="#1f3756" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
                     </VerticalStackLayout>
                 </Grid>
 
