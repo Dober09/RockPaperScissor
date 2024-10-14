@@ -26,7 +26,7 @@ namespace RockPaperScissor.ViewModels
 
         public void ClickedEvent(Object obj)
         {
-            var pop_up = new Views.RulesPopUp();
+            var pop_up = new Views.ResultsPage();
             App.Current.MainPage.ShowPopup(pop_up);
 
 
