@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="RockPaperScissor.Views.ResultsPage"
-               xmlns:viewmodel="clr-namespace:RockPaperScissor.ViewModels"
+             xmlns:viewmodel="clr-namespace:RockPaperScissor.ViewModels"
                CanBeDismissedByTappingOutsideOfPopup="False"
              >
     
@@ -14,18 +14,31 @@
           
 
                         <ImageButton 
-                                     x:Name="imageBtn"
+                                 x:Name="imageBtn"
                                  Aspect="AspectFit"
                                  WidthRequest="75"
                                  HeightRequest="75"
                                  BackgroundColor="AntiqueWhite"
                                  CornerRadius="50"
-                                 BorderColor="{Binding Color}"
                                  BorderWidth="5"
                                  HorizontalOptions="Center"
                                  VerticalOptions="Start"
                                  Padding="15" 
-                            />
+                         />
+            
+                            <ImageButton 
+                                
+                                 x:Name="cpuBtn"
+                                 Aspect="AspectFit"
+                                 WidthRequest="75"
+                                 HeightRequest="75"
+                                 BackgroundColor="AntiqueWhite"
+                                 CornerRadius="50"
+                                 BorderWidth="5"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Start"
+                                 Padding="15" 
+                             />
                         
                     
              

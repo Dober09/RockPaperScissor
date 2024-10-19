@@ -8,6 +8,7 @@ namespace RockPaperScissor.Models
 {
     public class GameModel
     {
+        public int Id { get; set; }
         public string HandName { get; set; }
         public string HandImage { get; set; }
 

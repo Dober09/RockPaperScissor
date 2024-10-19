@@ -13,11 +13,15 @@ namespace RockPaperScissor.ViewModels
     {
         
         
-       public  int CpuHand(ObservableCollection<GameModel> handPlayeds)
+       public  GameModel CpuHand(ObservableCollection<GameModel> handPlayeds)
        { 
             Random random = new Random();
 
-            return random.Next(handPlayeds.Count);
+            int idx = random.Next(handPlayeds.Count);
+            Console.WriteLine(idx.ToString());
+
+            return ( handPlayeds.Where(handplayed => handplayed.Id == idx).FirstOrDefault());
+
 
        }
 
