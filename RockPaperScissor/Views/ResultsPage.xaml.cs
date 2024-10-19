@@ -4,11 +4,15 @@ namespace RockPaperScissor.Views;
 
 public partial class ResultsPage : Popup
 {
-	public ResultsPage()
+	public ResultsPage(string url, string color)
 	{
 		InitializeComponent();
-		BindingContext = new HandsToBePlayed();
-		listview.ItemsSource = new HandsToBePlayed().Result;
+		BindingContext = new GameViewModel();
+		imageBtn.Source = url;
+		imageBtn.BorderColor = Color.FromHex(color);
+
+		
+		
 	}
 
     private void PlayAgainBtn_Clicked(object sender, EventArgs e)

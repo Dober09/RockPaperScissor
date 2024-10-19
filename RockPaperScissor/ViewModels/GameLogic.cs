@@ -1,5 +1,8 @@
-﻿using System;
+﻿
+using RockPaperScissor.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +11,17 @@ namespace RockPaperScissor.ViewModels
 {
     public class GameLogic
     {
-        private int score = 0;
         
+        
+       public  int CpuHand(ObservableCollection<GameModel> handPlayeds)
+       { 
+            Random random = new Random();
 
-        public void logic(string user_player , string cpu_player)
+            return random.Next(handPlayeds.Count);
+
+       }
+
+        public void Logic(string user_player , string cpu_player)
         {
 
             if (user_player == "user_paper" && cpu_player == "cpu_rock")

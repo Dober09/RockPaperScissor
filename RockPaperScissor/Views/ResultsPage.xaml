@@ -3,20 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="RockPaperScissor.Views.ResultsPage"
+               xmlns:viewmodel="clr-namespace:RockPaperScissor.ViewModels"
                CanBeDismissedByTappingOutsideOfPopup="False"
              >
     
     
+    
     <VerticalStackLayout  HorizontalOptions="Center" Margin="0,100,0,0" Spacing="3" HeightRequest="400"  WidthRequest="360" Background="#1f3756"  >
         <HorizontalStackLayout Margin="50"  HorizontalOptions="Center" Spacing="60">
-            <CollectionView x:Name="listview"
-                            ItemsSource="{Binding PlayerHand}"
-                            ItemsLayout="HorizontalList"
-                            >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
+          
 
-                        <ImageButton Source="{Binding HandImage }"
+                        <ImageButton 
+                                     x:Name="imageBtn"
                                  Aspect="AspectFit"
                                  WidthRequest="75"
                                  HeightRequest="75"
@@ -30,9 +28,7 @@
                             />
                         
                     
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+             
         </HorizontalStackLayout>
 
         <Label Text="You lose" Margin="0,10" HorizontalOptions="Center" TextColor="Snow" FontSize="30" FontAttributes="Bold"/>

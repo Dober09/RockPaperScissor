@@ -8,8 +8,8 @@ public partial class GamePage : ContentPage
 	public GamePage()
 	{
 		InitializeComponent();
-		BindingContext = new HandsToBePlayed();
-		listview.ItemsSource = new HandsToBePlayed().Handsplayed;
+		BindingContext = new GameViewModel();
+		listview.ItemsSource = new GameViewModel().AvailableHand;
 	}
 
 

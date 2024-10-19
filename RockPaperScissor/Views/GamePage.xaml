@@ -7,10 +7,12 @@
              >
     <!-- Grid Game -->
 
-    
-    
-    
-    <Grid  RowDefinitions="200,.7*,.3*">
+    <ContentPage.BindingContext>
+        <viewmodel:GameViewModel/>
+    </ContentPage.BindingContext>
+
+
+        <Grid  RowDefinitions="200,.7*,.3*">
         <!--The Score Menu -->
         <Border Stroke="#606e85"
             StrokeThickness="4"
@@ -34,7 +36,7 @@
 
 
                         <Label Text="Score" TextColor="#1f3756" FontSize="Title" FontAttributes="Bold"  />
-                        <Label x:Name="score" Text="0" TextColor="#1f3756" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
+                        <Label x:Name="score" Text="{Binding score}" TextColor="#1f3756" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
                     </VerticalStackLayout>
                 </Grid>
 
@@ -43,7 +45,7 @@
         </Border>
 
 
-        <CollectionView x:Name="listview" ItemsSource="{Binding Handsplayed,Source={ viewmodel:HandsToBePlayed} }" Grid.Row="1" >
+        <CollectionView x:Name="listview" ItemsSource="{Binding AvailableHand }" Grid.Row="1" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
@@ -54,12 +56,12 @@
                              HeightRequest="75"
                              BackgroundColor="White"
                              CornerRadius="50"
-                             BorderColor="{Binding Color}"
+                             BorderColor="{Binding HandColor}"
                              BorderWidth="5"
                              HorizontalOptions="Center"
                              VerticalOptions="Start"
                              Padding="15" 
-                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HandsToBePlayed}}, Path =PlayerSelectedHand }" 
+                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path =HandPlayed }" 
                              CommandParameter="{Binding .}"
                  />
 
@@ -79,7 +81,7 @@
              BorderColor="snow"
              BorderWidth="1"
              Grid.Row="2"
-             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HandsToBePlayed}}, Path =RulePopup_Clicked }" 
+             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path =RulesButton }" 
              CommandParameter="{Binding .}"
      />
     </Grid>
