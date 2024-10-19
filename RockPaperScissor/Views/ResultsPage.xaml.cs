@@ -7,6 +7,7 @@ public partial class ResultsPage : Popup
 {
 	public ResultsPage(GameModel playerHand,GameModel cpuHand)
 	{
+		 
 		InitializeComponent();
 		BindingContext = new GameViewModel();
 		imageBtn.Source = playerHand.HandImage;
@@ -14,6 +15,8 @@ public partial class ResultsPage : Popup
 
 		cpuBtn.Source = cpuHand.HandImage;
 		cpuBtn.BorderColor = Color.FromHex(cpuHand.HandColor);
+
+		resultText.Text = $"You {new GameLogic().Logic(playerHand.HandName, cpuHand.HandName)}";
 		
 		
 	}

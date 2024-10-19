@@ -44,7 +44,7 @@
              
         </HorizontalStackLayout>
 
-        <Label Text="You lose" Margin="0,10" HorizontalOptions="Center" TextColor="Snow" FontSize="30" FontAttributes="Bold"/>
+        <Label x:Name="resultText" Margin="0,10" HorizontalOptions="Center" TextColor="Snow" FontSize="30" FontAttributes="Bold"/>
 
         <Button Text="Play Again"
                 Margin="0,30"
